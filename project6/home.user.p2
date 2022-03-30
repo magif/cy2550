@@ -1,0 +1,20 @@
+# Last Modified: Tue Mar 29 22:33:02 2022
+#include <tunables/global>
+
+/home/kevin/cy2550/project6/p2 {
+  /{usr/,}lib/@{multiarch}/**.so*   mr,
+  @{PROC}/filesystems            r,
+   @{PROC}/cpuinfo                r,
+  /etc/hosts              r,
+  /etc/passwd             r,
+  network inet  stream,
+	/var/log/syslog r,
+	/etc/timezone r,
+	/proc/uptime r,
+	/etc/hostid r,
+	/home/*/cy2550/project6/template r,
+  /home/*/.project2/config w,
+  /home/kevin/cy2550/project6/p2 mr,
+  /tmp/project* rw,
+
+}
